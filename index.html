@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Queue Dashboard</title>
+        <link rel="shortcut icon" type="image/jpg" href="./favicon.ico" />
+        <link href="styles/main.css" rel="stylesheet" />
+
+        <!-- external scripts -->
+        <script type="text/javascript" src="./external/dayjs.min.js"></script>
+        <script type="text/javascript" src="./external/dayjs.utc.min.js"></script>
+        <script>
+            dayjs.extend(window.dayjs_plugin_utc);
+        </script>
+
+        <script type="text/javascript" src="./external/loader.js"></script>
+        <script>
+            google.charts.load('current', { packages: ['corechart'] });
+        </script>
+
+        <!-- scripts -->
+        <script src="./bundle.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="header">
+                <div id="title">Queue Dashboard</div>
+                <div id="controls">
+                    <span id="timer">⏳</span>
+                    <span class="control" id="toggle-config">⚙️</span>
+                </div>
+            </div>
+            <div id="config-container" class="hidden"></div>
+            <div id="chart-containers" class="normal">
+                <div id="arrival-rate" class="chart-container">
+                    <div class="chart"></div>
+                    <div class="loading-icon lds-dual-ring" hidden></div>
+                    <div class="warning-icon" hidden>⚠️</div>
+                    <div class="maximize-icon toggle-full-screen-icon">⛶</div>
+                    <div class="minimize-icon toggle-full-screen-icon" hidden>🗕</div>
+                </div>
+                <div id="departure-rate" class="chart-container">
+                    <div class="chart"></div>
+                    <div class="loading-icon lds-dual-ring" hidden></div>
+                    <div class="warning-icon" hidden>⚠️</div>
+                    <div class="maximize-icon toggle-full-screen-icon">⛶</div>
+                    <div class="minimize-icon toggle-full-screen-icon" hidden>🗕</div>
+                </div>
+                <div id="average-processing-time" class="chart-container">
+                    <div class="chart"></div>
+                    <div class="loading-icon lds-dual-ring" hidden></div>
+                    <div class="warning-icon" hidden>⚠️</div>
+                    <div class="maximize-icon toggle-full-screen-icon">⛶</div>
+                    <div class="minimize-icon toggle-full-screen-icon" hidden>🗕</div>
+                </div>
+                <div id="queue-length" class="chart-container">
+                    <div class="chart"></div>
+                    <div class="loading-icon lds-dual-ring" hidden></div>
+                    <div class="warning-icon" hidden>⚠️</div>
+                    <div class="maximize-icon toggle-full-screen-icon">⛶</div>
+                    <div class="minimize-icon toggle-full-screen-icon" hidden>🗕</div>
+                </div>
+                <div id="waiting-time-stats" class="chart-container">
+                    <div class="chart panel-container"></div>
+                    <div class="loading-icon lds-dual-ring" hidden></div>
+                    <div class="warning-icon" hidden>⚠️</div>
+                    <div class="maximize-icon toggle-full-screen-icon">⛶</div>
+                    <div class="minimize-icon toggle-full-screen-icon" hidden>🗕</div>
+                </div>
+                <div id="error-rate" class="chart-container">
+                    <div class="chart"></div>
+                    <div class="loading-icon lds-dual-ring" hidden></div>
+                    <div class="warning-icon" hidden>⚠️</div>
+                    <div class="maximize-icon toggle-full-screen-icon">⛶</div>
+                    <div class="minimize-icon toggle-full-screen-icon" hidden>🗕</div>
+                </div>
+                <div id="drop-zone" class="chart-container">
+                    <div class="chart"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
